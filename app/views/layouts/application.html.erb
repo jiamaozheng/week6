@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flights</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+  <%= csrf_meta_tags %>
+
+</head>
+  <body>
+
+    <div class="container">
+
+      <% if notice.present? %>
+        <div class="alert alert-info">
+          <%= notice %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+
+
+      <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+    var sc_project=10678926;
+    var sc_invisible=0;
+    var sc_security="a97329ce";
+    var scJsHost = (("https:" == document.location.protocol) ?
+    "https://secure." : "http://www.");
+    document.write("<sc"+"ript type='text/javascript' src='" +
+    scJsHost+
+    "statcounter.com/counter/counter.js'></"+"script>");
+    </script>
+    <noscript><div class="statcounter"><a title="shopify
+    analytics ecommerce" href="http://statcounter.com/shopify/"
+    target="_blank"><img class="statcounter"
+    src="http://c.statcounter.com/10678926/0/a97329ce/0/"
+    alt="shopify analytics ecommerce"></a></div></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+
+  </body>
+</html>

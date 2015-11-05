@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-git2.min.js"></script>
+
+  </head>
+  <body>
+    <a href="#">Click Me</a>
+    <div id="results">
+
+    </div>
+
+    <script>
+      $(function() {
+        $("a").on("click", function() {
+          $.ajax({
+            url: "http://localhost:3000/flights.json",
+            
+            success: function(response) {
+              console.log(response)
+              $.each(response, function() {
+                $('#results').append('<p>' + this.origin + ' GATE: ' + this.gate + '</p>');
+              });
+            }
+          });
+        })
+      })
+    </script>
+  </body>
+</html>
